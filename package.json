@@ -27,7 +27,11 @@
     "matchdep": "~0.1.1",
     "grunt-google-cdn": "~0.1.0",
     "grunt-ngmin": "~0.0.1",
-    "grunt-notify": "~0.1.4"
+    "grunt-notify": "~0.1.4",
+    "karma": "~0.8"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS"
   },
   "engines": {
     "node": ">=0.8.0"
