@@ -9,7 +9,7 @@ login = (req, res, next) =>
 	
 	restOptions = 
 		username : 'john.armstrong-prior@esendex.com'
-		password : 'dubstepdad'
+		password : '*******'
 		headers :
 			'Content-Type' : 'text/xml'
 	sys.puts 'Logging in...'
