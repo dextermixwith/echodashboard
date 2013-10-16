@@ -26,11 +26,12 @@
     "grunt-google-cdn": "~0.1.0",
     "grunt-ngmin": "~0.0.1",
     "grunt-notify": "~0.1.4",
-    "karma": "~0.8",
-    "grunt-contrib-jasmine-node": "~0.1.1"
+    "karma": "~0.9",
+    "grunt-jasmine-node": "~0.1.0",
+    "jasmine-node": "~1.11.0"
   },
   "scripts": {
-    "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS"
+    "test": "jasmine-node test/spec/node/*.spec.js --coffee"
   },
   "engines": {
     "node": ">=0.8.0"

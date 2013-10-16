@@ -26,17 +26,18 @@ module.exports = function (grunt) {
         autoWatch: true
       }
     },   
-    "jasmine-node": {
-      options: {
-        coffee: true
-      },
-      run: {
-        spec: "test/spec/node"
-      },
-      env: {
-        NODE_PATH: "lib/js"
-      },
-      executable: './node_modules/.bin/jasmine-node'
+    jasmine_node: {
+      specNameMatcher: "./spec", // load only specs containing specNameMatcher
+      projectRoot: ".",
+      requirejs: false,
+      forceExit: true,
+      extensions : "coffee",
+      jUnit: {
+        report: false,
+        savePath : "./build/reports/jasmine/",
+        useDotNotation: true,
+        consolidate: true
+      }
     }, 
     watch: {
       coffee: {
@@ -276,6 +277,8 @@ module.exports = function (grunt) {
   ]);
   
   grunt.loadNpmTasks('grunt-karma');
-  grunt.loadNpmTasks('grunt-contrib-jasmine-node');
+  grunt.loadNpmTasks('grunt-jasmine-node');
+
+  grunt.registerTask('default', 'jasmine_node');
 
 };
