@@ -31,7 +31,7 @@
     "jasmine-node": "~1.11.0"
   },
   "scripts": {
-    "test": "jasmine-node test/spec/node/*.spec.js --coffee"
+    "test": "jasmine-node test/spec/node/*.spec.coffee --coffee"
   },
   "engines": {
     "node": ">=0.8.0"
