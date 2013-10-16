@@ -18,7 +18,7 @@ describe('Controller: BatchCtrl', function () {
     BatchCtrl = $controller('BatchCtrl', { $scope: scope });
   }));
 
-  it('Should have the batch Id correctly set', function () {
+  it('Should have the batch ID correctly set', function () {
     expect(scope.batchId).toBe(batchId);
   });
 });

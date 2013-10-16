@@ -6,7 +6,6 @@ Cookies = require 'cookies'
 sessionId = ''
 
 login = (req, res, next) =>
-	
 	restOptions = 
 		username : 'john.armstrong-prior@esendex.com'
 		password : '*******'

@@ -25,7 +25,19 @@ module.exports = function (grunt) {
         configFile: 'karma.conf.js',
         autoWatch: true
       }
-    },    
+    },   
+    "jasmine-node": {
+      options: {
+        coffee: true
+      },
+      run: {
+        spec: "test/spec/node"
+      },
+      env: {
+        NODE_PATH: "lib/js"
+      },
+      executable: './node_modules/.bin/jasmine-node'
+    }, 
     watch: {
       coffee: {
         files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
@@ -242,6 +254,7 @@ module.exports = function (grunt) {
     'coffee',
     'compass',
     'connect:test',
+    'jasmine-node',
     'karma'
   ]);
 
@@ -263,5 +276,6 @@ module.exports = function (grunt) {
   ]);
   
   grunt.loadNpmTasks('grunt-karma');
+  grunt.loadNpmTasks('grunt-contrib-jasmine-node');
 
 };
